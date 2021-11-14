@@ -1,0 +1,12 @@
+(module
+	(func $square (param i32) (result i32)
+		local.get 0
+		local.get 0
+		i32.mul
+	)
+    (func $add (param i32 i32) (result i32)
+        local.get 0
+        local.get 0
+        i32.add
+    )
+)

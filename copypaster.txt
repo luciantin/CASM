@@ -1,0 +1,51 @@
+
+
+    // if the bytes equals an id of a section then we call the handler function for that section
+    // we assign the return of the handler to the section_read_return_flag, so we can check for an error and return it
+    // if an error occurs in the handler
+//    printf("Section id : %02x with lenght %02x \n", section_id, ch);
+
+//    int section_read_return_flag = 0;
+
+//    if(ch == WASM_SECTION_CODE_CUSTOM)      if((section_read_return_flag = parse_section_custom())      != PARSER_OK) return section_read_return_flag;
+//    if(ch == WASM_SECTION_CODE_TYPE)        if((section_read_return_flag = parse_section_type(fp))      != PARSER_OK) return section_read_return_flag;
+//    if(ch == WASM_SECTION_CODE_IMPORT)      return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_FUNCTION)    return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_TABLE)       return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_MEMORY)      return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_GLOBAL)      return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_EXPORT)      return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_START)       return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_ELEMENT)     return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_CODE)        return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_DATA)        return PARSER_NOT_IMPLEMENTED;
+//    if(ch == WASM_SECTION_CODE_DATA_COUNT)  return PARSER_NOT_IMPLEMENTED;
+
+//    unsigned char section_flag = WASM_SECTION_CODE_CUSTOM; // starting section, unless it doesn't exist/isn't used
+
+    char* cp;
+    cp = wasm_descriptor;
+    printf("Description: ");
+    for (int i = 0; i < 4; i++ ) printf("%02x ", cp[i]);
+    printf("\n");
+    cp = wasm_version;
+    printf("Version: ");
+    for (int i = 0; i < 4; i++ ) printf("%02x ", cp[i]);
+    printf("\n");
+
+
+    //inline int parse_section_custom(){
+    //    return PARSER_NOT_IMPLEMENTED;
+    //}
+    //
+    //inline int parse_section_type(FILE* fp){
+    //    unsigned char ch;
+    //    struct wasm_section section_type;
+    //
+    //    ch = getc(fp);  if(ch == 0xFF) return PARSER_ERROR; // get char and check if we haven't reached end-of-file
+    //
+    //    section_type.length = ch;
+    //    section_type.section_fp_start = ftell(fp);
+    //
+    //    return PARSER_OK;
+    //}
